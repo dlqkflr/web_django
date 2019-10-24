@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>{% now "m월 d일" as today %}</p> <!-- strtime으로 검색하면 나옴.-->
+    {% if today == '4월 16일' %}
+        <p>예.</p>
+    {% else %}
+        <p>아니오.</p>
+    {% endif %}
+
+    {% if result %}
+        <h1>예</h1>
+    {% else %}
+        <h1>아니오</h1>
+    {% endif %}
+</body>
+</html>
