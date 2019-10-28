@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>만나서 반갑습니다! {{ name }}</h1>
+    <h1>{{ count }} 개를 구매하셨습니다!</h1>
+    {% for lotto in my_lottos%}
+    <li>{{ lotto }}</li>
+    {% endfor %}
 </body>
 </html>
