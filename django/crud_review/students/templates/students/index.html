@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body%}
+
+<h1>학생들</h1>
+
+{% for student in students %}
+<li><a href="/students/{{student.id}}/"><h3>{{student.id}}번 학생</h3></a>
+     <p>{{student.name}}는 {{student.age}}세</p>
+</li>
+
+{% endfor %}
+
+<a href="/students/new">학생 추가하기</a>
+
+{% endblock %}

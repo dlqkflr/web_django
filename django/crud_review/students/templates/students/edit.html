@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action="/students/{{students.pk}}/update/" method="POST">
+    {% csrf_token %}
+    <label for="">이름 : </label>
+    <input type="text" name="name" value="{{students.name}}">
+    <label for="">나이 :</label>
+    <input type="int" name="age" value="{{students.age}}">
+    <input type="submit">
+</form>
+
+<a href="/students/">취소하기</a>
+
+{% endblock %}

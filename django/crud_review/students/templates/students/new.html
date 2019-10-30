@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>Create Student</h1>
+
+<form action="/students/create/" method="POST">
+    {% csrf_token %}
+    <label for="">이름 : </label>
+    <input type="text" name="name">
+    <label for="">나이 :</label>
+    <input type="int" name="age">
+    <input type="submit">
+</form>
+
+<a href="/students/"><h1>홈</h1></a>
+
+{% endblock %}
