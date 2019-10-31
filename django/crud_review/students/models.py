@@ -11,4 +11,6 @@ class Students(models.Model):
     def __str__(self): # 매직 매서드 (특수목적)
         return f'{self.id}번 학생 -이름 : {self.name} , 나이 : {self.age}'
 
-    
+    # 1. python manage.py makemigrations
+
+    # 2. python manage.py migrate 실행

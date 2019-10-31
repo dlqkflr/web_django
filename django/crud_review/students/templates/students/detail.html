@@ -12,5 +12,13 @@
 <a href="/students/"><h1>홈</h1></a>
 <a href="/students/{{students.pk}}/edit/"><h1>수정하기</h1></a>
 
+<!-- a  tag는 POST 요청 보낼 수 없습니다. 그렇다면 form tag! -->
+<!-- <a href="{% url 'delete' students.pk %}"> 삭제</a> -->
+
+<form action="{% url 'students:delete' student.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="submit" value = "delete">
+</form>
+
 
 {% endblock %}

@@ -2,7 +2,7 @@
 
 {% block body %}
 
-<form action="/students/{{students.pk}}/update/" method="POST">
+<form action="" method="POST">
     {% csrf_token %}
     <label for="">이름 : </label>
     <input type="text" name="name" value="{{students.name}}">
