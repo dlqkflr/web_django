@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>MOVIES!</h1>
+
+<a href="/movies/new/">
+    <p>create</p>
+</a>
+
+<!-- a href="/students/{{student.id}}/"> -->
+{% for movie in movies %}
+<li>
+    <a href="/movies/{{ movie.pk }}">
+        <h3>{{ movie.pk }}번째 영화 : {{ movie.title }}</h3>        
+    </a>
+    <p> 영화 평점 : {{ movie.score }}</p>
+</li>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>The Movie</h1>
+
+<h1>{{ movies.pk }}번째 영화</h1>
+<h2>영화 제목: {{ movies.title }}</h2>
+<h2>영화 영어제목: {{ movies.title_en }}</h2>
+<h2>관람객 수: {{movies.audience}}</h2>
+<h2>개봉일: {{movies.open_date}}</h2>
+<h2>장르: {{movies.genre}}</h2>
+<h2>관람등급: {{movies.watch_grade }}</h2>
+<h2>관람평점: {{movies.score}}</h2>
+<h2><a href="{{movies.poster_url}}">영화 포스터</a></h2>
+<h2>영화 소개: {{movies.description }}</h2>
+
+
+<br>
+<br>
+<a href="/movies/">목록</a>
+<br>
+<br>
+
+<a href="/movies/{{ movies.pk }}/edit">수정</a>
+
+<br>
+<br>
+<a href="/movies/{{ movies.pk }}/delete">삭제</a>
+{% endblock %}
